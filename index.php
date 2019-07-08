@@ -1,7 +1,13 @@
 <?php
-require 'db.php';
+  require_once("vendor/autoload.php");
+  require 'db.php';
+  require 'init.php';
 
-require_once("vendor/autoload.php");
+
+
+
+
+
 
 $html = file_get_contents("https://www.rbc.ru/");
 
@@ -56,6 +62,56 @@ foreach($links as $link){
 
 
 
+      echo('<div style="border: 4px solid red;">');
+      echo('<div style="color: red; font-size: 20px;">$dataTitle</div>');
+      echo($dataTitle);
+      echo(' - <br/>');
+      echo('<div style="color: red; font-size: 20px;">$dataOverview</div>');
+      echo($dataOverview);
+      echo(' - <br/>');
+      echo('<div style="color: red; font-size: 20px;">$dataImage</div>');
+      echo($dataImage);
+      echo(' - <br/>');
+      echo('<div style="color: red; font-size: 20px;">$dataBody</div>');
+      echo($dataBody);
+      echo(' - <br/>');
+      echo('<div style="color: red; font-size: 20px;">$url</div>');
+      echo($url);
+      echo(' - <br/>');
+
+      $dataTitle    = $connection->real_escape_string($dataTitle);
+      $dataImage    = $connection->real_escape_string($dataImage);
+      $dataBody     = $connection->real_escape_string($dataBody);
+      $url          = $connection->real_escape_string($url);
+
+      $sql = "INSERT INTO `news` (`id`, `title`, `image`, `body`, `link`) VALUES
+      (NULL, '".$dataTitle."', '".$dataImage."', '".$dataBody."', '".$url."')";
+
+      $result = $connection->query($sql);
+
+      if ($result) {
+        echo $result;
+      } else {
+        echo 'ERROR';
+      }
+
+      echo('</div>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +138,7 @@ phpQuery::unloadDocuments();
 ?>
 
 
-<ul> 
+<!--ul> 
   <?php foreach($full as $value): ?> 
     <li> 
       <h3>
@@ -107,13 +163,15 @@ phpQuery::unloadDocuments();
       </div> 
     </li> 
   <?php endforeach; ?>
- </ul>
+ </ul-->
 
 
 
 
 
 
-
+<script>
+  console.log('>>>>>>');
+</script>
 
 
