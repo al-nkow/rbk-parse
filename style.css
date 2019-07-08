@@ -1,0 +1,80 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+body {
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
+  background: #ececec;
+  color: #494b5a;
+}
+p {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 400px;
+}
+.head {
+  padding: 20px;
+  font-size: 22px;
+  background: #666d96;
+  color: #dce1fd;
+}
+.head a {
+  color: #dce1fd;
+}
+.content {
+  padding: 20px;
+}
+.preview__title {
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.preview__body {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.more {
+  padding: 6px 20px;
+  display: inline-block;
+  background: #4e7a90;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.more:hover {
+  background: #335261;
+}
+.preview {
+  margin-bottom: 30px;
+}
+.title {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.post-img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.post-body {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.source {
+  color: #666d96;
+  text-decoration: underline;
+}
+.source:hover {
+  text-decoration: none;
+}
