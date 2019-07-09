@@ -1,5 +1,7 @@
 ## Backend developer test task
 
+Результат выполнения: [http://rbk.mwild.tmweb.ru/](http://rbk.mwild.tmweb.ru/)
+
 #### Задание: 
  
 Парсить (программно) первые 15 новостей с [rbc.ru](https://www.rbc.ru) (блок, откуда брать новости показан на скриншоте) 
